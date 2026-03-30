@@ -51,5 +51,6 @@ button {
     transform: scaleX(-1);
 }
 .left-img, .right-img {
+    background: transparent;
     filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3));
 }
