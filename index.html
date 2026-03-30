@@ -15,6 +15,7 @@
 <button onclick="checkPassword()">Unlock ❤️</button>
 
 <p id="error" style="color:red;"></p>
+<img src="kaju.jpg" id="wrong-img" style="display:none; width:200px; margin-top:20px;">
 
 <script>
 function checkPassword() {
@@ -26,7 +27,8 @@ function checkPassword() {
     if(input === correctPassword) {
         window.location.href = "page1.html";
     } else {
-        document.getElementById("error").innerText = "Wrong date 😢 Try again!";
+        document.getElementById("error").innerText = "Wrong date 😢 PITAI HOGI!";
+        document.getElementById("wrong-img").style.display = "block";
     }
 }
 </script>
