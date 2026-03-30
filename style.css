@@ -83,3 +83,21 @@ button {
     transform: scale(1.05);
     transition: 0.3s;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #ff4d6d;
+    color: white;
+    border-radius: 10px;
+}
+
+.risk {
+    background: #333;
+}
