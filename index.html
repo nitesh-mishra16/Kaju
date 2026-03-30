@@ -28,7 +28,7 @@ function checkPassword() {
         window.location.href = "page1.html";
     } else {
         document.getElementById("error").innerText = "Wrong date 😢 PITAI HOGI!";
-        document.getElementById("wrong-img").style.display = "block";
+        document.getElementById("wrong-img").classList.add("fade-in");
     }
 }
 </script>
