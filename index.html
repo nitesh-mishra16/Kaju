@@ -16,7 +16,11 @@
 
 <p id="error" style="color:red;"></p>
 <img src="kaju.jpg" id="wrong-img" class="center-img" style="display:none;">
-
+    
+<audio id="bg-music" loop>
+    <source src="pillu.mp3" type="audio/mpeg">
+</audio>
+    
 <script>
 function checkPassword() {
     var input = document.getElementById("password").value;
@@ -25,7 +29,21 @@ function checkPassword() {
     var correctPassword = "13082025";  
 
     if(input === correctPassword) {
-        window.location.href = "page1.html";
+        var audio = document.getElementById("bg-music");
+
+        audio.play().then(() => {
+            // Save that music started
+            sessionStorage.setItem("musicPlaying", "true");
+            sessionStorage.setItem("musicTime", audio.currentTime);
+
+            // Small delay for smoother transition
+            setTimeout(() => {
+                window.location.href = "page1.html";
+            }, 300);
+        }).catch(() => {
+            // fallback (still go ahead)
+            window.location.href = "page1.html";
+        });
     } else {
         document.getElementById("error").innerText = "Wrong date 😢 PITAI HOGI!";
         document.getElementById("wrong-img").style.display = "block";
