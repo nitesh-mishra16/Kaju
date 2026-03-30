@@ -64,3 +64,22 @@ button {
 .center-img {
     box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
