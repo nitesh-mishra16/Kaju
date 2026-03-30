@@ -31,3 +31,22 @@ button {
     border-radius: 10px;
     cursor: pointer;
 }
+
+.left-img {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 120px;
+    border-radius: 10px;
+}
+
+.right-img {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 120px;
+    border-radius: 10px;
+
+    /* mirror effect */
+    transform: scaleX(-1);
+}
