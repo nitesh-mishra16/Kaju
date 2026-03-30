@@ -7,9 +7,29 @@
 <body>
 
 <h1>Happy Birthday ❤️</h1>
-<p>Click below for a surprise</p>
+<p>Enter our special date to continue 💕</p>
 
-<a href="page1.html">Start the Journey</a>
+<input type="password" id="password" placeholder="DDMMYYYY">
+<br><br>
+
+<button onclick="checkPassword()">Unlock ❤️</button>
+
+<p id="error" style="color:red;"></p>
+
+<script>
+function checkPassword() {
+    var input = document.getElementById("password").value;
+
+    // 👉 CHANGE THIS to your anniversary date
+    var correctPassword = "14022023";  
+
+    if(input === correctPassword) {
+        window.location.href = "page1.html";
+    } else {
+        document.getElementById("error").innerText = "Wrong date 😢 Try again!";
+    }
+}
+</script>
 
 </body>
 </html>
